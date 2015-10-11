@@ -1,0 +1,2 @@
+- Install at https://chrome.google.com/webstore/detail/better-xkcd-alt-text/najapmlahpflnbocnamlcanlnclceppb
+- Navigate to a comic at https://xkcd.com/ to see it in action
