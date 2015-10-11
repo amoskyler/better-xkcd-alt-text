@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Better XKCD Alt Text",
   "description": "This extension diplays the XKCD alt text after clicking a panel.",
-  "version": "0.1",
+  "version": "0.2",
   "icons": {
   },
   "content_scripts": [
