@@ -1,0 +1,40 @@
+#alt-element {
+	position: relative;	
+}
+
+.hide {
+ 	opacity: 0.5;
+	-webkit-filter: blur(4px);
+	-moz-filter: blur(4px);
+	-ms-filter: blur(4px);
+	-o-filter: blur(4px);
+	filter: blur(4px);
+}
+
+.show {
+ 	opacity: 1;
+	-webkit-filter: blur(0px);
+	-moz-filter: blur(0px);
+	-ms-filter: blur(0px);
+	-o-filter: blur(0px);
+	filter: blur(0px);
+}
+
+#alt-text-container {
+	position: relative;	
+	font-family: Helvetica,sans-serif;
+	width: 60%;
+	margin: 25px auto;
+	overflow: hidden;
+}
+
+#alt-text-container #alt-text {
+	line-height: 1.5;
+	text-align: left;
+}
+
+#alt-element #fuzz-text {
+	position: absolute;
+	top: 38%;
+	left: 32%;
+}
