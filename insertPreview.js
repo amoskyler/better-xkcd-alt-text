@@ -1,6 +1,10 @@
-function displayAltText (node) {
+function displayAltText (e) {
 	var altTextContainer,
-		altFuzzText = document.getElementById('fuzz-text');
+			altText = document.getElementById('alt-text'),
+			panel = e.target,
+			altFuzzText = document.getElementById('fuzz-text');
+
+	altText.innerHTML = panel.title;
 
 	altFuzzText.style.display = altFuzzText.style.display === "none" ? 'block' : 'none';
 
@@ -10,7 +14,7 @@ function displayAltText (node) {
 
 
 (function () {
-	'use strict';	
+	'use strict';
 	var altElement,
 		altText,
 		altTextContainer,
@@ -31,7 +35,7 @@ function displayAltText (node) {
 	altTextContainer.className = 'hide';
 
 	altText = document.createElement('div');
-	altText.id = 'alt-text'
+	altText.id = 'alt-text';
 
 	altTextContainer.appendChild(altText);
 
@@ -45,7 +49,8 @@ function displayAltText (node) {
 
 	// for each alt-element child, on click display alt text for specific comic (supports multi pane comics)
 	for (var i = 0; i < comicDiv.children.length; i++) {
-		altText.innerHTML += comicDiv.children[i].title;
-		comicDiv.children[i].addEventListener('click', displayAltText.bind(null, comicDiv.children[i]));
+		if (i === 0) altText.innerHTML = comicDiv.children[i].title;
+		if (comicDiv.children[i].id !== 'alt-element')
+			comicDiv.children[i].addEventListener('click', displayAltText);
 	}
 }());
